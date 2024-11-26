@@ -1,0 +1,20 @@
+{% extends 'reposeidon_app/base.html' %}
+{% block content %}
+
+    <div>
+        <a href="{% url 'new' %}">글 작성</a>
+    </div>
+
+    {% for blog in blogs %}
+    <div>
+        <h3>{{blog.title}}</h3>
+
+        {{blog.writer}}
+        <br>
+        {{blog.summary}}
+        <a href = "{%url 'detail' blog.id%}">..more</a>
+    
+        <br><br>
+{% endfor %}
+
+{% endblock %}

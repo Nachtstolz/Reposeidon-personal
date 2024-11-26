@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+</head>
+<body> 
+    <h1>{{blog.title}}</h1>
+    <div>
+    작성자 : {{blog.writer}}
+    <br>
+    날짜 : {{blog.pub_date}}
+    </div>
+    <a href="{% url 'edit' blog.id %}">글 수정</a>
+    <a href="{% url 'delete' blog.id %}">글 삭제</a>
+    <hr>
+    {% if blog.image %}
+        <p><img src="{{blog.image.url}}" alt=""></p>
+    {% endif }
+    <p>{{blog.body}}</p>
+    
+</body>
+</html>

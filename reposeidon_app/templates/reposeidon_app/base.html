@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+
+    <link rel="icon" href="img/reposeidon_logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+    <link rel="stylesheet" href="{% static 'common.css' %}" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    
+</head>
+    <title>Reposeidon</title>
+
+    <script>
+    //재윤
+      function showOutput(){
+        var userTitle = document.querySelector('input[id= "userTitle"]');
+        var userContent = document.querySelector('textarea[id= "userContent"]');
+        var userWriter = document.querySelector('input[id= "userWriter"]');
+
+        //테스트용
+        console.log(userTitle.value);
+        console.log(userContent.value);
+        console.log(userWriter.value);
+
+        $.ajax({
+            url: 'showOutput',
+            type: 'GET',
+            data:{
+                'userContent': userContent.value,
+                'userTitle': userTitle.value,
+                'userWriter': userWriter.value,
+            },
+            datatype: 'json',
+
+            success: function(data){
+                //테스트용
+                console.log(data['output']);
+
+                //JSON 내부에 '배열'형태인 값들을 "제목", "url", "간략내용" etc...로 섹션을 나누어 JSON.parse()로 객체 변환 후
+                //변환 된 객체를 map해서 결과로 보여주면 될 것으로 판단됨.
+
+                var output = document.getElementById('output');
+                document.all('output').innerHTML = data['output'];
+            }
+        });
+      }
+    </script>
+
+  </head>
+    <body>
+        {% load static %}
+            <header class="head" >
+                <div class="inner" style="witdh:100%">
+                    <!-- 레포세이돈 로고 부분 -->
+                    <a href="#" class="logo">
+                    <img
+                        class="logoImg"
+                        src="{% static 'reposeidon_logo.png' %}"
+                        alt="reposeidonLogo"
+                    />
+
+                    <!-- 레포세이돈 타이틀 부분 -->
+                    <img
+                        class="logoTitle"
+                        src="{% static 'reposeidon_title.JPG' %}"
+                        alt="reposeidonTitle"
+                    />
+                    </a>
+
+                    <!--우측 로그인, 회원가입 버튼-->
+                    <ul class="submenu">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+            </header>
+        <br/>
+            <!-- 윗부분까지 navbar 코드 -->
+
+        {% load crispy_forms_tags %}
+
+            <div class="container">
+                <form method="GET" action="{% url 'reposeidon_app:mainPage' %}" class="form-group" style="padding-top: 2rem;align-content: center">
+                    {% csrf_token %}
+
+                    <div class="item">
+                        <h3>제목 :</h3>
+                        <input type="text" id="userTitle" name="title" value="{{form.title |crispy}}"/>
+                    </div>
+
+                        
+                    <div class="item">
+                        <p>작성자 :</p>
+                        <input type="text" id="userWriter" name="writer" value="{{form.writer |crispy}}">
+                    </div>  
+
+                    <div class="item">
+                        <p>본문 :</p>
+                        <textarea name="body" id="userContent" cols="30" rows="10">{{form.body |crispy}}</textarea>
+                    </div>
+                </form>
+
+                <div class="item">
+                    <button type="button" onclick="showOutput()">조회하기</button>
+                </div>
+
+                <div class="item" id="output"></div>
+
+            </div>
+    </body>
+</html>

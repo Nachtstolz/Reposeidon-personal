@@ -1,0 +1,137 @@
+.writeFormBox {
+    width: 50%;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 100px;
+}
+
+.titleForm {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.contentForm {
+    padding-bottom: 0px;
+}
+
+.title {
+    width: 50%;
+    height: 23px;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 4px solid #90C1E8;
+    outline: 4px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+::-webkit-input-placeholder {
+    color: #BDBDBD;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+    outline: none;
+}
+
+.content {
+    width: 50%;
+    height: 450px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 10px;
+    outline: none;
+    background-color: #FFFFFF;
+    border: 4px solid #90C1E8;
+    color: black;
+    font-weight: lighter;
+    font-size: 15px;
+    resize: none;
+}
+
+.buttonBox {
+    width: 50%;
+    height: 30px;
+    padding: 10px;
+    padding-top: 0px;
+    background-color: #FFFFFF;
+    border-left: 4px solid #90C1E8;
+    border-right: 4px solid #90C1E8;
+    border-bottom: 4px solid #90C1E8;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+}
+
+.saveInfo {
+    color: #369BED;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-top: 2px;
+    margin-left: 250px;
+}
+
+.sync_button {
+    background-image: url('img/syncBtn.JPG');
+    background-size: contain;
+    width: calc(100% + 10*2); 
+    margin: -37.5px 0 0px 410px;
+    /* padding-left: 520px; */
+    width:100px;
+    height:40px;
+    border:0;
+    outline:0;
+    float: left;
+}
+
+.save_button {
+    background-image: url('img/saveBtn.JPG');
+    background-size: contain;
+    width: calc(100% + 10*2); 
+    margin: -37.5px -10px 0px 0px;
+    width:100px;
+    height:40px;
+    border-bottom-right-radius: 7px;
+    outline:0;
+    float: left;
+}
+
+.searchBox {
+    position: absolute;
+    top: -60px;
+    left: 650px;
+    width: 40%;
+    height: 555PX;
+    font-size: 15px;
+    text-align: right;
+    margin-left: 30px;
+    margin-top: 100px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    border: 4px solid #90C1E8;
+}
+
+.searchFilter {
+    color: #369BED;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.searchResult {
+    color: #369BED;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.filterBtn {
+    margin-left: 15px;
+}

@@ -1,0 +1,128 @@
+.contentBox {
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    height: 550px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    left: 10%;
+    top: 60px;
+    border: 4px solid #90C1E8;
+    outline: 4px;
+    overflow: scroll;
+    z-index: 2;
+}
+
+.contentBox::-webkit-scrollbar {
+    width: 10px;
+}
+
+.contentBox::-webkit-scrollbar-thumb {
+    background-color: #a2d3fa;
+    border-radius: 30px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+.profile_icon {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    text-align: center;
+    left: 47%;
+    bottom: 87%;
+    z-index: 3;
+}
+
+.username_info {
+    font-size: 20px;
+    font-weight: bold;
+    color: #369BED;
+    margin-top: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.tempsave_list {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: #369BED;
+    margin-left: 30px;
+}
+
+.save_element {
+    width: 90%;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    margin-left: 40px;
+    padding: 0px 0px 0px 10px;
+    margin-top: 15px;
+    background-color: #f2f8fd;
+    box-shadow: 0.5px 0.5px 2px #909090;
+    cursor: pointer;
+}
+
+.save_title {
+    float: left;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.save_time {
+    font-size: 12px;
+    color: #909090;
+    margin-right: 20px;
+    margin-top: 4px;
+    float: right;
+    font-weight: 600;
+}
+
+.scrap_list {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: #369BED;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.scrap_element {
+    /* display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto); */
+
+    width: 80%;
+    height: 70px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: #000000;
+    margin-left: 90px;
+    padding: 0px 0px 0px 10px;
+    margin-top: 15px;
+    background-color: #f2f8fd;
+    box-shadow: 0.5px 0.5px 2px #909090;
+    cursor: pointer;
+}
+
+.scrap_title {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.scrap_link {
+    font-size: 12px;
+    color: #003cff;
+    text-decoration: underline;
+    margin-right: 20px;
+
+}
+
+.footerImg {
+    top: 645px;
+    left: 540px;
+    position: relative;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+
+    <link rel="icon" href="img/reposeidon_logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+    <link rel="stylesheet" href="{% static 'common.css' %}" />
+
+    <title>Reposeidon</title>
+    </head>
+        <body>
+
+            {% load static %}
+
+            <header>
+            <div class="inner">
+                <!-- 레포세이돈 로고 부분 -->
+                <a href="#" class="logo">
+                <img
+                    class="logoImg"
+                    src="{% static 'reposeidon_logo.png' %}"
+                    alt="reposeidonLogo"
+                />
+
+                <!-- 레포세이돈 타이틀 부분 -->
+                <img
+                    class="logoTitle"
+                    src="{% static 'reposeidon_title.JPG' %}"
+                    alt="reposeidonTitle"
+                />
+                </a>
+
+                <!--우측 로그인, 회원가입 버튼-->
+                <ul class="submenu">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+            </header>
+            <!-- 윗부분까지 navbar 코드 -->
+
+    </body>
+</html>

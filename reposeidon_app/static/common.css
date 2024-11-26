@@ -1,0 +1,161 @@
+/* 공통 css */
+body {
+    background: linear-gradient( to bottom, #AAF0FF, #F3FDFF);
+    background-image: url('/img/bgImg.JPG');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    line-height: 2;
+    font-size: 15px;
+    color: #369BED;
+}
+  
+.inner {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+  
+.inner__content {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    background-color: #AAF0FF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+  
+header > .inner {
+    height: 60px;
+}
+  
+header .logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+    text-decoration: none;
+}
+  
+header .logo .logoImg {
+    height: 40px;
+    margin-right: 5px;
+}
+  
+header .logo .logoTitle {
+    height: 24px;
+}
+  
+header .submenu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+}
+  
+header .submenu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #369BED;
+}
+  
+header .submenu li a:hover {
+    font-weight: bolder;
+    color: #025497;
+}
+  
+header .submenu li + li {
+    margin-left: 37px;
+}
+  
+
+.footerImg {
+    width: 350px;
+    height: 20px;
+    position: relative;
+    top: 60px;
+    left: 550px;
+}
+
+/* 유저가 검색&조회할 내용 입력칸 */
+container{
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    justify-content: stretch;
+
+    width:100%;
+    min-width: 200px;
+    height:100%;
+
+  }
+
+    /*제목 */
+container.item:nth-child(1){
+    flex-basis:auto;
+    align-self: auto;
+    flex-grow: 1;
+    flex-basis: 30%;
+
+    align-items: center;
+    min-width: 40%;
+
+    order: 1;
+}
+    /*작성자*/
+container.item:nth-child(2){
+    flex-basis:auto;
+    align-self: auto;
+    flex-grow: 1;
+    flex-basis: 30%;
+
+    min-width:  40%;
+
+    order: 3;
+}
+    /*내용*/
+container.item:nth-child(3){
+    flex-basis:auto;
+    align-self: auto;
+    flex-grow: 1;
+    flex-basis: 30%;
+
+    min-width:  40%;
+
+    order: 4;
+}
+
+container.item:nth-child(4){
+    flex-basis:auto;
+    align-self: auto;
+    flex-grow: 1;
+    flex-basis: 30%;
+
+    min-width:  40%;
+
+    order: 5;
+}
+
+    /*결과 값 반환 창*/
+container.item:nth-child(5){
+    flex-basis:auto;
+    align-self: auto;
+    flex-grow: 1;
+    flex-basis: 30%;
+
+    min-width:  40%;
+
+    order: 2;
+}
